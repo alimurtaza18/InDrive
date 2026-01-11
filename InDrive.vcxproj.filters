@@ -13,5 +13,66 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{e47804f9-bace-4ec8-a0cd-a0615ba5ee78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services">
+      <UniqueIdentifier>{dbbe6b3a-82be-45ec-90b2-9ab4abfaccbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{0823b138-2ac7-4343-9e58-5c4c992355eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{137aeb5d-0aba-4c63-9ff0-3bc3258537b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Passengers.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Vehicle.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="RideRequest.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="RideServices.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStore.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleUI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Passengers.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Vehicle.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="RideRequest.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="RideServices.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStore.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
