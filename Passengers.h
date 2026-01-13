@@ -10,7 +10,7 @@ class Passenger {
     string phonenumber;
     string pickup;
     string dropoff;
-
+    RideRequest riderequest; 
 
 public:
     void setPassengersname(string name); 

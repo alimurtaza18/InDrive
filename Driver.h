@@ -5,6 +5,7 @@
 class Driver {
 
     Vehicle vehicle; 
+    RideRequest riderequest; 
 
     string name;
     int id;

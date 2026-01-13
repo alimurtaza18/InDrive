@@ -1,18 +1,20 @@
 #include "Driver.h"
 #include "Vehicle.h"
+#include "RideRequest.h"
 #include<iostream>
 using namespace std; 
 
 class Driver {
 
     Vehicle vehicle; 
+    RideRequest riderequest;
 
     string name;
     int id;
     string email;
     string phonenumber;
-    
-    
+
+
 public: 
     void setDrivername(string name) {
         this->name = name; 

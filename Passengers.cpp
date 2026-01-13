@@ -1,18 +1,21 @@
 #include "Passengers.h"
+#include "RideRequest.h"
 #include <iostream>
 using namespace std; 
 
 class Passenger {
+
     string name; 
     int id; 
     string email; 
     string phonenumber; 
     string pickup; 
     string dropoff; 
+    RideRequest riderequest; 
 
 public: 
     
-    void setPassengerssname(string name) {
+    void setPassengersname(string name) {
         this->name = name; 
     }
     void setPassengersid(int id) {
