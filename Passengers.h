@@ -1,31 +1,33 @@
 #pragma once
+#include "RideRequest.h"
 #ifndef Passengers_H
 #define Passengers_H
 #include <iostream>
+#include <string>
 
 class Passenger {
-    string name;
+    std::string name;
     int id;
-    string email;
-    string phonenumber;
-    string pickup;
-    string dropoff;
+    std::string email;
+    std::string phonenumber;
+    std::string pickup;
+    std::string dropoff;
     RideRequest riderequest; 
 
 public:
-    void setPassengersname(string name); 
+    void setPassengersname(std::string name); 
     void setPassengersid(int id); 
-    void setPassengersemail(string email);
-    void setPassengersphonenumber(string phonenumber);
-    void setPassengerspickup(string pickup);
-    void setPassengersdropoff(string dropoff);
+    void setPassengersemail(std::string email);
+    void setPassengersphonenumber(std::string phonenumber);
+    void setPassengerspickup(std::string pickup);
+    void setPassengersdropoff(std::string dropoff);
 
-    string getPassengersname(string name); 
+    std::string getPassengersname(std::string name); 
     int getPassengersid(int id);
-    string getPassengersemail(string email);
-    string getPassengersphonenumber(string phonenumber);
-    string getPassengerspickup(string pickup);
-    string getPassengersdropoff(string dropoff);
+    std::string getPassengersemail(std::string email);
+    std::string getPassengersphonenumber(std::string phonenumber);
+    std::string getPassengerspickup(std::string pickup);
+    std::string getPassengersdropoff(std::string dropoff);
 
 };
 

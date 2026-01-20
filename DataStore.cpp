@@ -2,15 +2,14 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cctype>
 using namespace std; 
-
-class DataStore {
-
-public:
-	void registerUserAccount() {
+ 
+	void DataStore :: registerUserAccount() {
 		string name, phonenumber, email, userID;
-		bool numberresult = isValidNumber;
-		bool emailresult = isValidEmail; 
+
+		bool numberresult = isValidNumber(phonenumber);
+		bool emailresult = isValidEmail(email);
 
 
 		cout << "--------User's Account Registration-------" << endl;
@@ -21,7 +20,6 @@ public:
 		cout << "Enter phone number: " << endl;
 		cin >> phonenumber;
 		isValidNumber(phonenumber); 
-			cout << "Invalid phone number " << endl; 
 		}
 
 		while (emailresult != true) {
@@ -39,17 +37,17 @@ public:
 		}
 }
 
-	bool isValidNumber(string number) {
+	bool DataStore::isValidNumber(std::string number) {
 		areAllDigits(number); 
-		bool result = areAllDigits;
+		bool result = areAllDigits(number);
 		if (number.length() != 11 || number.substr(0,2) == "03" || result==true) {
-			cout << "Inavlid Number" << endl; 
+			cout << "Invalid Number" << endl; 
 			return false; 
 		}
 		return true; 
 	}
 
-	bool areAllDigits(string number) {
+	bool DataStore::areAllDigits(std::string number) {
 		for (int i = 0; i < number.length(); i++) {
 			if (!isdigit(number[i])) {
 				return false; 
@@ -58,10 +56,12 @@ public:
 		return true; 
 	}
 
-	bool isValidEmail(string email) {
+	bool DataStore :: isValidEmail(std::string email) {
 		int count = 0; 
 		bool result; 
-		int dotind, atind; 
+		int dot_ind;
+		int at_ind; 
+
 		for (int i = 0; i < email.length(); i++) {
 			if (email[i] == '@') {
 				count++; 
@@ -73,12 +73,12 @@ public:
 				result = false; 
 			}
 			if (email[i] == '.') {
-				dotind = i; 
+				 dot_ind = i; 
 			}
 			else if (email[i] == '@') {
-				atind == i; 
+				 at_ind = i; 
 			}
-			if (dotind <= atind) {
+			if (dot_ind <= at_ind) {
 				return false; 
 			}
 			if (email[i] == ' ') {
@@ -87,4 +87,3 @@ public:
 		} 
 		return true; 
 	}
-};

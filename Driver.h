@@ -1,4 +1,8 @@
 #pragma once
+#include "Vehicle.h"
+#include "RideRequest.h"
+#include <iostream>
+#include <string>
 #ifndef DRIVER_H
 #define DRIVER_H
 
@@ -7,21 +11,21 @@ class Driver {
     Vehicle vehicle; 
     RideRequest riderequest; 
 
-    string name;
+    std::string name;
     int id;
-    string email;
-    string phonenumber;
+    std::string email;
+    std::string phonenumber;
 
 public: 
-    void setDrivername(string name); 
+    void setDrivername(std::string name); 
     void setDriverid(int id);
-    void setDriveremail(string email);
-    void setDriverphonenumber(string phonenumber);
+    void setDriveremail(std::string email);
+    void setDriverphonenumber(std::string phonenumber);
 
-    string getDrivername();
+    std::string getDrivername();
     int getDriverid();
-    string getDriveremail();
-    string getDriverphonenumber();
+    std::string getDriveremail();
+    std::string getDriverphonenumber();
 };
 
 #endif DRIVER_H

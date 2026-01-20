@@ -2,58 +2,46 @@
 #include <iostream>
 using namespace std; 
 
-class RideRequest {
-
-	int rideID; 
-	int passengerID; 
-	int driverID; 
-	string pickup; 
-	string dropoff; 
-	string ridestatus; 
-	double fare; 
-
-public: 
-	void setRideid(int rideID) {
+	void RideRequest::setRideid(int rideID) {
 		this->rideID;
 	}
-	void setPassengerID(int passengerID) {
+	void RideRequest::setPassengerID(int passengerID) {
 		this->passengerID = passengerID; 
 	}
-	void setDriverID(int driverID) {
+	void RideRequest::setDriverID(int driverID) {
 		this->driverID = driverID; 
 	}
-	void setPickup(string pickup) {
+	void RideRequest::setPickup(string pickup) {
 		this->pickup = pickup; 
 	}
-	void setdropoff(string dropoff) {
+	void RideRequest::setdropoff(string dropoff) {
 		this->dropoff = dropoff; 
 	}
-	void setRidestatus(string ridestatus) {
+	void RideRequest::setRidestatus(string ridestatus) {
 		this->ridestatus = ridestatus; 
 	}
-	void setFare(double fare) {
+	void RideRequest::setFare(double fare) {
 		this->fare = fare; 
 	}
 
-	int getRideid() {
+	int RideRequest::getRideid() {
 		return rideID; 
 	}
-	int getPassengerID() {
+	int RideRequest::getPassengerID() {
 		return passengerID; 
 	}
-	int getDriverID() {
+	int RideRequest::getDriverID() {
 		return driverID; 
 	}
-	string getPickup() {
+	string RideRequest::getPickup() {
 		return pickup; 
 	}
-	string getDropoff() {
+	string RideRequest::getDropoff() {
 		return dropoff; 
 	}
-	string getRidestatus() {
+	string RideRequest::getRidestatus() {
 		return ridestatus; 
 	}
-	double getRidefare() {
+	double RideRequest::getRidefare() {
 		return fare; 
 	}
-};

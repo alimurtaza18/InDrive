@@ -3,55 +3,42 @@
 #include <iostream>
 using namespace std; 
 
-class Passenger {
-
-    string name; 
-    int id; 
-    string email; 
-    string phonenumber; 
-    string pickup; 
-    string dropoff; 
-    RideRequest riderequest; 
-
-public: 
-    
-    void setPassengersname(string name) {
+ 
+    void Passenger::setPassengersname(string name) {
         this->name = name; 
     }
-    void setPassengersid(int id) {
+    void Passenger::setPassengersid(int id) {
         this->id = id;
     }
-    void setPassengersemail(string email) {
+    void Passenger::setPassengersemail(string email) {
         this->email = email;
     }
-    void setPassengersphonenumber(string phonenumber) {
+    void Passenger::setPassengersphonenumber(string phonenumber) {
         this->phonenumber = phonenumber;
     }
-    void setPassengerspickup(string pickup) {
+    void Passenger::setPassengerspickup(string pickup) {
         this->pickup = pickup;
     }
-    void setPassengersdropoff(string dropoff) {
+    void Passenger::setPassengersdropoff(string dropoff) {
         this->dropoff = dropoff;
     }
        
-    string getPassengersname(string name){
+    string Passenger::getPassengersname(string name){
         return name; 
     }
-    int getPassengersid(int id) {
+    int Passenger::getPassengersid(int id) {
         return id;
     }
-    string getPassengersemail(string email) {
+    string Passenger::getPassengersemail(string email) {
         return email;
     }
-    string getPassengersphonenumber(string phonenumber) {
+    string Passenger::getPassengersphonenumber(string phonenumber) {
         return phonenumber;
     }
-    string getPassengerspickup(string pickup) {
+    string Passenger::getPassengerspickup(string pickup) {
         return pickup;
     }
-    string getPassengersdropoff(string dropoff) {
+    string Passenger::getPassengersdropoff(string dropoff) {
         return dropoff;
     }
   
-
-};

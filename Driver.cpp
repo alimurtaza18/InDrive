@@ -4,42 +4,30 @@
 #include<iostream>
 using namespace std; 
 
-class Driver {
-
-    Vehicle vehicle; 
-    RideRequest riderequest;
-
-    string name;
-    int id;
-    string email;
-    string phonenumber;
-
-
-public: 
-    void setDrivername(string name) {
+    void Driver::setDrivername(string name) {
         this->name = name; 
     }
-    void setDriverid(int id) {
+    void Driver::setDriverid(int id) {
         this->id = id; 
     }
-    void setDriveremail(string email) {
+    void Driver::setDriveremail(string email) {
         this->email = email; 
     }
-    void setDriverphonenumber(string phonenumber) {
+    void Driver::setDriverphonenumber(string phonenumber) {
         this->phonenumber = phonenumber; 
     }
 
-    string getDrivername() {
+    string Driver::getDrivername() {
         return name; 
     }
-    int getDriverid() {
+    int Driver::getDriverid() {
         return id; 
     }
-    string getDriveremail() {
+    string Driver::getDriveremail() {
         return email; 
     }
-    string getDriverphonenumber() {
+    string Driver::getDriverphonenumber() {
         return phonenumber; 
     }
-};
+
 

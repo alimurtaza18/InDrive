@@ -1,46 +1,38 @@
 #include "Vehicle.h"
 #include <iostream>
+#include <string>
 using namespace std; 
 
-class Vehicle {
 
-	int id; 
-	string name; 
-	string numberplate; 
-	string model; 
-	string colour; 
-
-public:
-	void setVehicleid(int id) {
+	void Vehicle::setVehicleid(int id) {
 		this->id = id; 
 	}
-	void setVehiclename(string name) {
+	void Vehicle::setVehiclename(string name) {
 		this->name = name; 
 	}
-	void setVehiclenumberplate(string numberplate) {
+	void Vehicle::setVehiclenumberplate(string numberplate) {
 		this->numberplate = numberplate; 
 	}
-	void setVehiclemodel(string model) {
+	void Vehicle::setVehiclemodel(string model) {
 		this->model = model; 
 	}
-	void setVehiclecolour(string colour) {
+	void Vehicle::setVehiclecolour(string colour) {
 		this->colour = colour; 
 	}
 
 
-	int getVehicleid(int id) {
+	int Vehicle::getVehicleid(int id) {
 		return id; 
 	}
-	string getVehiclename(string name) {
+	string Vehicle::getVehiclename(string name) {
 		return name; 
 	}
-	string getVehiclenumberplate(string numberplate) {
+	string Vehicle::getVehiclenumberplate(string numberplate) {
 		return numberplate; 
 	}
-	string getVehiclemodel(string model) {
+	string Vehicle::getVehiclemodel(string model) {
 		return model; 
 	}
-	string getVehiclecolour(string colour) {
+	string Vehicle::getVehiclecolour(string colour) {
 		return colour; 
 	}
-};
