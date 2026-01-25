@@ -1,11 +1,11 @@
-#include "DataStore.h"
+#include "PassengerInfoIntake.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <cctype>
 using namespace std; 
 
-bool DataStore::at_count(std::string email) {
+bool PassengerInfoIntake::at_count(std::string email) {
 	int count = 0;
 	for (int i = 0; i < email.length(); i++) {
 		if (email[i] == '@') {
@@ -18,14 +18,14 @@ bool DataStore::at_count(std::string email) {
 	return true; 
 }
 
-bool DataStore::at_position(std::string email) {
+bool PassengerInfoIntake::at_position(std::string email) {
 		if (email[0] == '@' || email[email.length() - 1] == '@') {
 			return false;
 		}
 	return true; 
 }
 
-bool DataStore::dot_and_at_position(std::string email) {
+bool PassengerInfoIntake::dot_and_at_position(std::string email) {
 	int dot_ind = -1;
 	int at_ind = -1;
 	for (int i = 0; i < email.length(); i++) {
@@ -43,7 +43,7 @@ bool DataStore::dot_and_at_position(std::string email) {
 	}
 
 
-bool DataStore::space_check(std::string email) {
+bool PassengerInfoIntake::space_check(std::string email) {
 	bool sc = true; 
 	for (int i = 0; i < email.length(); i++) {
 		if (email[i] == ' ') {
@@ -53,7 +53,7 @@ bool DataStore::space_check(std::string email) {
 	return sc;
 }
 
-bool DataStore::isValidNumber(std::string number) {
+bool PassengerInfoIntake::isValidNumber(std::string number) {
 	areAllDigits(number);
 	if (number.length() != 11 || number.substr(0, 2) != "03" || !areAllDigits(number)) { 
 		return false;
@@ -61,7 +61,7 @@ bool DataStore::isValidNumber(std::string number) {
 	return true;
 }
 
-bool DataStore::areAllDigits(std::string number) {
+bool PassengerInfoIntake::areAllDigits(std::string number) {
 	for (int i = 0; i < number.length(); i++) {
 		if (!isdigit(number[i])) {
 			return false;
@@ -70,7 +70,7 @@ bool DataStore::areAllDigits(std::string number) {
 	return true;
 }
 
-bool DataStore::isValidEmail(std::string email) {
+bool PassengerInfoIntake::isValidEmail(std::string email) {
 	if (at_count(email) && at_position(email) && dot_and_at_position(email) && space_check(email)) {
 		return true; 
 	}
@@ -78,21 +78,19 @@ bool DataStore::isValidEmail(std::string email) {
 }
 
 
-	void DataStore :: registerUserAccount() {
+	void PassengerInfoIntake :: registerUserAccount() {
 		string name, phonenumber, email, userID;  
 		bool valid_number = false;
 		bool valid_email = false;
 
 		cout << "--------User's Account Registration-------" << endl;
 		cout << "Enter your name: ";
-		cin >> name;
+		getline(cin, name);
 
-		do {
-		cout << "Enter phone number: " << endl;
-		cin >> phonenumber;
-		
-		cin.clear(); 
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		while (!valid_number) {
+		cout << "Enter phone number: " << endl;
+		getline(cin, phonenumber);
 
 		if(cin.fail()){
 			cin.clear(); 
@@ -100,16 +98,15 @@ bool DataStore::isValidEmail(std::string email) {
 			cout << "Invalid Input, please try again" << endl; 
 			continue; 
 		}
-
 		valid_number = isValidNumber(phonenumber); 
-		}while (!valid_number);
+		if (valid_number == false) {
+			cout << "Invalid input, please try again." << endl; 
+		}
+		}
 
 		do {
 			cout << "Enter email address: " << endl;
 			cin >> email;
-
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
 
 			if (cin.fail()) {
 				cin.clear();
@@ -117,8 +114,10 @@ bool DataStore::isValidEmail(std::string email) {
 				cout << "Invalid Input, please try again" << endl;
 				continue;
 			}
-
 			valid_email = isValidEmail(email); 
+			if (valid_email == false) {
+				cout << "Invalid email, please try again." << endl;
+			}
 		}while (!valid_email); 
 
 		ofstream Passengerfile("Passenger.txt", ios::app);

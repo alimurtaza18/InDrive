@@ -42,11 +42,14 @@
     <ClInclude Include="RideServices.h">
       <Filter>Services</Filter>
     </ClInclude>
-    <ClInclude Include="DataStore.h">
+    <ClInclude Include="PassengerInfoIntake.h">
       <Filter>Data</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleUI.h">
       <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="DriverInfoIntake.h">
+      <Filter>Data</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -65,7 +68,7 @@
     <ClCompile Include="RideServices.cpp">
       <Filter>Services</Filter>
     </ClCompile>
-    <ClCompile Include="DataStore.cpp">
+    <ClCompile Include="PassengerInfoIntake.cpp">
       <Filter>Data</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleUI.cpp">
@@ -73,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DriverInfoIntake.cpp">
+      <Filter>Data</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

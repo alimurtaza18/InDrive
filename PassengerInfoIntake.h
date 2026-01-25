@@ -1,10 +1,10 @@
 #pragma once
-#ifndef DATASTORE_H
-#define DATASTORE_H
+#ifndef PassengerInfoIntake_H
+#define PassengerInfoIntake_H
 #include <iostream>
 #include <string>
 
-class DataStore {
+class PassengerInfoIntake {
 public: 
 	bool at_count(std::string email); 
 
@@ -23,4 +23,4 @@ public:
 	void registerUserAccount();
 };
 
-#endif DATASTORE_H
+#endif PassengerInfoIntake_H

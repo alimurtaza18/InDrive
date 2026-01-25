@@ -20,7 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleUI.h" />
-    <ClInclude Include="DataStore.h" />
+    <ClInclude Include="DriverInfoIntake.h" />
+    <ClInclude Include="PassengerInfoIntake.h" />
     <ClInclude Include="Driver.h" />
     <ClInclude Include="Passengers.h" />
     <ClInclude Include="RideRequest.h" />
@@ -29,7 +30,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleUI.cpp" />
-    <ClCompile Include="DataStore.cpp" />
+    <ClCompile Include="DriverInfoIntake.cpp" />
+    <ClCompile Include="PassengerInfoIntake.cpp" />
     <ClCompile Include="Driver.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Passengers.cpp" />
