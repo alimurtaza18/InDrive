@@ -20,6 +20,8 @@ public:
 
 	bool isValidEmail(std::string email);
 
+	int DriverID(int id); 
+
 	void registerUserAccount();
 };
 

@@ -27,6 +27,7 @@
     <ClInclude Include="RideRequest.h" />
     <ClInclude Include="RideServices.h" />
     <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="VehicleInfoIntake.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleUI.cpp" />
@@ -38,6 +39,7 @@
     <ClCompile Include="RideRequest.cpp" />
     <ClCompile Include="RideServices.cpp" />
     <ClCompile Include="Vehicle.cpp" />
+    <ClCompile Include="VehicleInfoIntake.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

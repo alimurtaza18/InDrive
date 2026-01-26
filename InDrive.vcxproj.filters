@@ -51,6 +51,9 @@
     <ClInclude Include="DriverInfoIntake.h">
       <Filter>Data</Filter>
     </ClInclude>
+    <ClInclude Include="VehicleInfoIntake.h">
+      <Filter>Data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Passengers.cpp">
@@ -78,6 +81,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DriverInfoIntake.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="VehicleInfoIntake.cpp">
       <Filter>Data</Filter>
     </ClCompile>
   </ItemGroup>

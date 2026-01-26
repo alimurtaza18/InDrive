@@ -77,9 +77,15 @@ bool PassengerInfoIntake::isValidEmail(std::string email) {
 	return false; 
 }
 
+int PassengerInfoIntake::PassengerID(int id) {
+	id++; 
+	return id; 
+}
+
 
 	void PassengerInfoIntake :: registerUserAccount() {
 		string name, phonenumber, email, userID;  
+		int PassengerID = 1000; 
 		bool valid_number = false;
 		bool valid_email = false;
 
@@ -129,4 +135,5 @@ bool PassengerInfoIntake::isValidEmail(std::string email) {
 		}
 }
 
+	
 	

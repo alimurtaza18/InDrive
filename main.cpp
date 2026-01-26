@@ -1,8 +1,12 @@
-#include "DataStore.h"
+#include "DriverInfoIntake.h"
+#include "PassengerInfoIntake.h"
 #include <iostream>
 using namespace std; 
 
 int main() {
-	DataStore ds; 
-	ds.registerUserAccount(); 
+	DriverInfoIntake dinfo; 
+	dinfo.registerUserAccount(); 
+
+	PassengerInfoIntake pinfo;
+	pinfo.registerUserAccount(); 
 }

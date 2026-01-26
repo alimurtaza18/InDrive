@@ -77,6 +77,10 @@ bool DriverInfoIntake::isValidEmail(std::string email) {
 	return false;
 }
 
+int DriverInfoIntake::DriverID(int id) {
+	id++;
+	return id;
+}
 
 void DriverInfoIntake::registerUserAccount() {
 	string name, phonenumber, email, userID;
