@@ -20,7 +20,7 @@ public:
 
 	bool isValidEmail(std::string email);
 
-	int PassengerID(int id); 
+	int PassengerID(); 
 
 	void registerUserAccount();
 };

@@ -3,8 +3,6 @@
 #include <string>
 using namespace std; 
 
-
-
 bool VehicleInfoIntake::RegisterVehicle() {
 	string vehicle_name; 
 

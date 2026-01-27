@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 #include <cctype>
 using namespace std; 
 
@@ -77,15 +78,24 @@ bool PassengerInfoIntake::isValidEmail(std::string email) {
 	return false; 
 }
 
-int PassengerInfoIntake::PassengerID(int id) {
-	id++; 
-	return id; 
+int PassengerInfoIntake::PassengerID() {
+	ifstream file("Passenger.txt");
+	string line;
+	int lastID = 1000;
+
+	while (getline(file, line)) {
+		std::stringstream ss(line);
+		string PassengerID;
+		getline(ss, PassengerID, ',');
+		lastID = stoi(PassengerID);
+	}
+	return lastID;
 }
 
 
 	void PassengerInfoIntake :: registerUserAccount() {
 		string name, phonenumber, email, userID;  
-		int PassengerID = 1000; 
+		int passenger_id; 
 		bool valid_number = false;
 		bool valid_email = false;
 
@@ -126,9 +136,11 @@ int PassengerInfoIntake::PassengerID(int id) {
 			}
 		}while (!valid_email); 
 
+		passenger_id = PassengerID();
+
 		ofstream Passengerfile("Passenger.txt", ios::app);
 		if (Passengerfile.is_open()) {
-			Passengerfile << name << " " << phonenumber << " " << email << endl;
+			Passengerfile << passenger_id <<"," << name << "," << phonenumber << "," << email << endl;
 		}
 		else {
 			cout << "File can't be opened." << endl;

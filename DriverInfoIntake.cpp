@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 #include <cctype>
 using namespace std;
 
@@ -77,15 +78,25 @@ bool DriverInfoIntake::isValidEmail(std::string email) {
 	return false;
 }
 
-int DriverInfoIntake::DriverID(int id) {
-	id++;
-	return id;
+int DriverInfoIntake::DriverID() {
+	ifstream file("Driver.txt"); 
+	string line; 
+	int lastID = 1000; 
+
+	while (getline(file, line)) {
+		std::stringstream ss(line); 
+		string DriverID; 
+		getline(ss, DriverID, ',');
+		lastID = stoi(DriverID); 
+	}
+	return lastID; 
 }
 
 void DriverInfoIntake::registerUserAccount() {
 	string name, phonenumber, email, userID;
 	bool valid_number = false;
 	bool valid_email = false;
+	int driver_id;
 
 	cout << "--------User's Account Registration-------" << endl;
 	cout << "Enter your name: ";
@@ -124,9 +135,11 @@ void DriverInfoIntake::registerUserAccount() {
 		}
 	} while (!valid_email);
 
+	driver_id = DriverID(); 
+
 	ofstream Driverfile("Driver.txt", ios::app);
 	if (Driverfile.is_open()) {
-		Driverfile << name << " " << phonenumber << " " << email << endl;
+		Driverfile << driver_id << "," << name << "," << phonenumber << "," << email << endl;
 	}
 	else {
 		cout << "File can't be opened." << endl;
