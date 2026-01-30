@@ -4,9 +4,18 @@
 using namespace std; 
 
 int main() {
-	DriverInfoIntake dinfo; 
-	dinfo.registerUserAccount(); 
+	int  user; 
+	cout << "****Wellcome to the Application****" << endl; 
+	cout << "PRess 1 for Driver, to for Passenger." << endl; 
+	cin >> user; 
 
-	PassengerInfoIntake pinfo;
-	pinfo.registerUserAccount(); 
+	if (user == 1) {
+		DriverInfoIntake dinfo;
+		dinfo.registerUserAccount();
+	}
+	else if (user == 2) {
+		PassengerInfoIntake pinfo;
+		pinfo.registerUserAccount();
+	}
+
 }

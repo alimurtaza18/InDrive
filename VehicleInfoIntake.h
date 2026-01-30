@@ -6,7 +6,8 @@
 
 class VehicleInfoIntake {
 public: 
-	bool RegisterVehicle(); 
+	int VehicleID(); 
+	void RegisterVehicle(); 
 
 };
 #endif // ! VehicleInfoIntak_H
