@@ -22,7 +22,7 @@ public:
 
 	int DriverID(); 
 
-	void registerUserAccount();
+	void DriverUserAccount();
 };
 
 #endif DriverInfoIntake_H

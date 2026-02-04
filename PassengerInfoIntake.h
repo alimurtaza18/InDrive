@@ -22,7 +22,7 @@ public:
 
 	int PassengerID(); 
 
-	void registerUserAccount();
+	void passengerUserAccount();
 };
 
 #endif PassengerInfoIntake_H

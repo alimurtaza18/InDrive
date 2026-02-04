@@ -87,13 +87,19 @@ int PassengerInfoIntake::PassengerID() {
 		std::stringstream ss(line);
 		string PassengerID;
 		getline(ss, PassengerID, ',');
-		lastID = stoi(PassengerID);
+		try {
+			lastID = stoi(PassengerID);
+		}
+		catch (const std::exception& e) {
+			cout << "Invalid Id." <<" | Reason: " <<e.what()<< endl;
+			
+		}
 	}
 	return lastID;
 }
 
 
-	void PassengerInfoIntake :: registerUserAccount() {
+	void PassengerInfoIntake :: passengerUserAccount() {
 		string name, phonenumber, email, userID;  
 		int passenger_id; 
 		bool valid_number = false;
@@ -101,6 +107,7 @@ int PassengerInfoIntake::PassengerID() {
 
 		cout << "--------User's Account Registration-------" << endl;
 		cout << "Enter your name: ";
+		cin.ignore(); 
 		getline(cin, name);
 
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
