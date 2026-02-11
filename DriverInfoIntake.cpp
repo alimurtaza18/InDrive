@@ -86,14 +86,13 @@ int DriverInfoIntake::DriverID() {
 	while (getline(file, line)) {
 		std::stringstream ss(line); 
 		string DriverID; 
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		getline(ss, DriverID, ',');
-		cout << "Value going to stoi is [" << DriverID << "]" << endl; 
+		if (DriverID.empty()) continue;
 		try {
 			lastID = stoi(DriverID);
 		}
 		catch (const std::exception& e) {
-			cout << "Invalid Id." <<" | Reason: " <<e.what()<< endl;
+			cout << "Invalid Id"<< endl;
 		}
 	}
 	return lastID+1; 

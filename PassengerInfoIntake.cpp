@@ -81,21 +81,22 @@ bool PassengerInfoIntake::isValidEmail(std::string email) {
 int PassengerInfoIntake::PassengerID() {
 	ifstream file("Passenger.txt");
 	string line;
-	int lastID = 1000;
+	int lastID = 2000;
 
 	while (getline(file, line)) {
 		std::stringstream ss(line);
 		string PassengerID;
 		getline(ss, PassengerID, ',');
+		if (PassengerID.empty()) continue;
 		try {
 			lastID = stoi(PassengerID);
 		}
 		catch (const std::exception& e) {
-			cout << "Invalid Id." <<" | Reason: " <<e.what()<< endl;
-			
+			cout << "Invalid Id" << endl;
+		
 		}
 	}
-	return lastID;
+	return lastID+1;
 }
 
 

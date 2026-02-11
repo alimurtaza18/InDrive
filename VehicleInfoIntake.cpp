@@ -8,20 +8,22 @@ using namespace std;
 int VehicleInfoIntake::VehicleID() {
 	ifstream file("Vehicle.txt");
 	string line;
-	int lastID = 1000;
+	int lastID = 3000;
 
 	while (getline(file, line)) {
 		std::stringstream ss(line);
 		string VehicleID;
 		getline(ss, VehicleID, ',');
+		if (VehicleID.empty()) continue;
+
 		try {
 			lastID = stoi(VehicleID);
 		}
 		catch (const std::exception& e) {
-			cout << "Invalid Id." << " | Reason: " << e.what() << endl;
+			cout << "Invalid Id" << endl;
 		}
-	}
-	return lastID;
+	} 
+	return lastID+1;
 }
 
 void VehicleInfoIntake::RegisterVehicle() {
