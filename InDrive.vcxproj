@@ -27,6 +27,7 @@
     <ClInclude Include="Passengers.h" />
     <ClInclude Include="RideRequest.h" />
     <ClInclude Include="RideServices.h" />
+    <ClInclude Include="Signin.h" />
     <ClInclude Include="Vehicle.h" />
     <ClInclude Include="VehicleInfoIntake.h" />
   </ItemGroup>
@@ -40,6 +41,7 @@
     <ClCompile Include="Passengers.cpp" />
     <ClCompile Include="RideRequest.cpp" />
     <ClCompile Include="RideServices.cpp" />
+    <ClCompile Include="Signin.cpp" />
     <ClCompile Include="Vehicle.cpp" />
     <ClCompile Include="VehicleInfoIntake.cpp" />
   </ItemGroup>

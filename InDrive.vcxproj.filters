@@ -57,6 +57,9 @@
     <ClInclude Include="Login.h">
       <Filter>Data</Filter>
     </ClInclude>
+    <ClInclude Include="Signin.h">
+      <Filter>Data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Passengers.cpp">
@@ -90,6 +93,9 @@
       <Filter>Data</Filter>
     </ClCompile>
     <ClCompile Include="Login.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Signin.cpp">
       <Filter>Data</Filter>
     </ClCompile>
   </ItemGroup>
