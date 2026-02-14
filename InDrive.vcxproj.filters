@@ -60,6 +60,9 @@
     <ClInclude Include="Signin.h">
       <Filter>Data</Filter>
     </ClInclude>
+    <ClInclude Include="InfoValidationFunctions.h">
+      <Filter>Data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Passengers.cpp">
@@ -96,6 +99,9 @@
       <Filter>Data</Filter>
     </ClCompile>
     <ClCompile Include="Signin.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoValidationFunctions.cpp">
       <Filter>Data</Filter>
     </ClCompile>
   </ItemGroup>

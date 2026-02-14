@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="ConsoleUI.h" />
     <ClInclude Include="DriverInfoIntake.h" />
+    <ClInclude Include="InfoValidationFunctions.h" />
     <ClInclude Include="Login.h" />
     <ClInclude Include="PassengerInfoIntake.h" />
     <ClInclude Include="Driver.h" />
@@ -34,6 +35,7 @@
   <ItemGroup>
     <ClCompile Include="ConsoleUI.cpp" />
     <ClCompile Include="DriverInfoIntake.cpp" />
+    <ClCompile Include="InfoValidationFunctions.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="PassengerInfoIntake.cpp" />
     <ClCompile Include="Driver.cpp" />
